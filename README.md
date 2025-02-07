@@ -1,4 +1,4 @@
-# alien-invasion
+# Alien Invasion
 A thrilling game where players can blast away alien invaders.
 
 ## Game Rules
