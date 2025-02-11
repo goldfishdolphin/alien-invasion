@@ -12,8 +12,8 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
         self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
-        self.settings.screen_width = self.settings.screen_width
-        self.settings.screen_height = self.settings.screen_width
+        self.settings.screen_width = self.screen.get_width()
+        self.settings.screen_height = self.screen.get_height()
         pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
@@ -77,8 +77,15 @@ class AlienInvasion:
     
     def _create_fleet(self):
          alien = Alien(self)
-         self.aliens.add(alien)
-
+         alien_width = alien.rect.width
+         current_x = alien_width
+         while current_x < (self.settings.screen_width - 2 * alien_width ):
+              new_alien = Alien(self)
+              new_alien.x = current_x
+              new_alien.rect.x = current_x
+              self.aliens.add(new_alien)
+              current_x += 2 * alien_width
+        
 
 if __name__ == '__main__':
     ai= AlienInvasion()
