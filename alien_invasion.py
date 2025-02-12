@@ -26,8 +26,7 @@ class AlienInvasion:
             self.ship.update()
             self._update_bullets()
             self._update_aliens()
-            self._update_screen()
-                  
+            self._update_screen()           
 
     def _check_events(self):
             for event in pygame.event.get():
