@@ -47,7 +47,12 @@ class AlienInvasion:
                      self._check_keyup_events(event)
     def _check_play_button(self, mouse_pos):
          if self.play_button.rect.collidepoint(mouse_pos):
+               self.stats.reset_status()
                self.stats.game_active = True
+               self.aliens.empty()
+               self.bullets.empty()
+               self._create_fleet()
+               self.ship.center_ship()
                         
     def _check_keydown_events(self,event):
           if event.key == pygame.K_RIGHT:
