@@ -54,6 +54,7 @@ class AlienInvasion:
                self.settings.initialize_dynamic_settings()
                self.stats.reset_status()
                self.stats.game_active = True
+               #self.scoreboard.prep_score()
                self.aliens.empty()
                self.bullets.empty()
                self._create_fleet()
