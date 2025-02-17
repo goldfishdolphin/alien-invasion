@@ -55,6 +55,7 @@ class AlienInvasion:
                self.stats.reset_status()
                self.stats.game_active = True
                self.scoreboard.prep_score()
+               self.scoreboard.prep_level()
                self.aliens.empty()
                self.bullets.empty()
                self._create_fleet()
@@ -99,7 +100,9 @@ class AlienInvasion:
           if not self.aliens:
                self.bullets.empty()
                self._create_fleet()
-               self.settings.increase_speed()           
+               self.settings.increase_speed()
+               self.stats.level += 1
+               self.scoreboard.prep_level()           
                  
     def _update_aliens(self):
          self._check_fleet_edges()
