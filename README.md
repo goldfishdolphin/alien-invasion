@@ -6,4 +6,5 @@ In Alien Invasion, the player controls a rocket ship that appears at the bottom 
 <hr>
 
 
-<img width="1920" alt="Screenshot 2025-02-14 at 14 45 31" src="https://github.com/user-attachments/assets/57ee8428-a63d-4e7f-aa66-4f59e2a99c3f" />
+
+<img width="1920" alt="Screenshot 2025-02-17 at 18 02 43" src="https://github.com/user-attachments/assets/d02193d6-7613-4a9f-ad31-dfcc53c38879" />
